@@ -8,6 +8,7 @@ import DefaultLayout from "@/layouts/default";
 import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent";
 import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
 import RotatingText from "@/blocks/TextAnimations/RotatingText/RotatingText";
+import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 
 const textsVelocity = [
   "Alojamientos Experiencias Actividades Transporte Organización",
@@ -15,11 +16,11 @@ const textsVelocity = [
 ];
 
 const textsRotating = [
-  "Alojamientos",
+  "Grupos",
+  "Estadias",
   "Actividades",
-  "Restauración",
   "Transporte",
-  "Promociones",
+  "Aventura",
 ];
 
 export default function IndexPage() {
@@ -64,11 +65,29 @@ export default function IndexPage() {
           <p className="text-xl pt-4 md:text-4xl lg:text-5xl">
             Organiza y gestiona tus viajes como nunca antes.
           </p>
-          <div className="flex justify-center mt-7 ">
-            <p className="flex flex-row">
-              Ten todo listo:
-              <RotatingText texts={textsRotating} />
-            </p>
+          <div className="flex justify-center gap-2  text-xl md:text-4xl lg:text-5xl ">
+            <p className="flex flex-row">Todo desde el chat</p>
+            <RotatingText
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              initial={{ y: "100%" }}
+              mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              rotationInterval={2000}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              staggerDuration={0.025}
+              staggerFrom={"last"}
+              texts={textsRotating}
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            />
+          </div>
+          <div className="flex justify-center mt-7">
+            <FadeContent>
+              <img
+                alt="Chat interface illustration"
+                className="w-70"
+                src="public/inputchat.png"
+              />
+            </FadeContent>
           </div>
         </div>
         <div className="flex gap-3">
