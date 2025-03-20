@@ -3,7 +3,7 @@ import { button as buttonStyles } from "@heroui/theme";
 import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
+// import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent";
 import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
