@@ -19,7 +19,7 @@ export default function DefaultLayout({
           className="flex items-center gap-1"
           href="https://github.com/frontio-ai/heroui"
         >
-          Made with HeroUI
+          Get in touch
         </Link>
       </footer>
     </div>

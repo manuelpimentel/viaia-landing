@@ -46,7 +46,7 @@ const SplitText: React.FC<SplitTextProps> = ({
           }
         }
       },
-      { threshold, rootMargin }
+      { threshold, rootMargin },
     );
 
     if (ref.current) {
@@ -74,18 +74,20 @@ const SplitText: React.FC<SplitTextProps> = ({
         : animationFrom,
       delay: i * delay,
       config: { easing },
-    }))
+    })),
   );
 
   return (
     <p
       ref={ref}
       className={`split-parent overflow-hidden inline ${className}`}
-      style={{ textAlign, whiteSpace: "normal", wordWrap: "break-word" }}>
+      style={{ textAlign, whiteSpace: "normal", wordWrap: "break-word" }}
+    >
       {words.map((word, wordIndex) => (
         <span
           key={wordIndex}
-          style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+          style={{ display: "inline-block", whiteSpace: "nowrap" }}
+        >
           {word.map((letter, letterIndex) => {
             const index =
               words.slice(0, wordIndex).reduce((acc, w) => acc + w.length, 0) +
@@ -94,13 +96,14 @@ const SplitText: React.FC<SplitTextProps> = ({
             return (
               <animated.span
                 key={index}
+                className="inline-block  transform transition-opacity will-change-transform"
                 style={springs[index] as unknown as React.CSSProperties}
-                className="inline-block transform transition-opacity will-change-transform">
+              >
                 {letter}
               </animated.span>
             );
           })}
-          <span style={{ display: "inline-block", width: "0.3em" }}>
+          <span style={{ display: "inline-block", width: "0.3em", height: "1.5em" }}>
             &nbsp;
           </span>
         </span>
