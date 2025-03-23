@@ -1,6 +1,6 @@
-import React from "react"; // Added missing React import
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
+
 import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 import DefaultLayout from "@/layouts/default";
 import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent";
@@ -8,6 +8,7 @@ import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocit
 import RotatingText from "@/blocks/TextAnimations/RotatingText/RotatingText";
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import { siteConfig } from "@/config/site";
+import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 
 const textsVelocity = [
   "Alojamientos Experiencias Actividades Transporte Organización",
@@ -32,7 +33,7 @@ export default function IndexPage() {
             delay={50}
             text="¡Hola Viajero!"
           />
-          <div className="text-2xl pt-72 md:text-4xl lg:text-5xl">
+          <div className="text-4xl pt-72 md:text-4xl lg:text-5xl">
             <SplitText
               className="text-2xl pt-10 md:text-4xl lg:text-5xl"
               delay={50}
@@ -45,16 +46,19 @@ export default function IndexPage() {
               <img
                 alt="Chat interface illustration"
                 className="w-70"
-                src="/inputchat.png"
+                src="/InputChat2.png"
               />
             </FadeContent>
           </div>
-          <div className="text-2xl pt-10 md:text-4xl lg:text-5xl">
-            <SplitText
-              className="text-2xl pt-10 md:text-4xl lg:text-5xl"
-              delay={50}
-              text="El tuyo empieza con un Prompt"
-            />
+          <div className="text-4xl pt-10 md:text-4xl lg:text-5xl">
+            <GradientText
+              animationSpeed={3}
+              className="custom-class"
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              showBorder={false}
+            >
+              El tuyo empieza con un Prompt
+            </GradientText>
             <p>💬</p>
           </div>
           <div className="text-2xl pt-10 md:text-4xl lg:text-5xl">
@@ -169,7 +173,7 @@ export default function IndexPage() {
             />
           </div>
           <p className="text-xl py-4 md:text-4xl lg:text-5xl">
-            Reservar Sin Estrés, Solo Emoción
+            Reservar sin estrés, solo emoción
           </p>
           <p className="text-xl py-4 text-left md:text-4xl lg:text-5xl">
             🛒 Elige lo que te gusta. <br />
