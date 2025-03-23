@@ -7,6 +7,7 @@ import { useSpring, animated, SpringConfig } from "@react-spring/web";
 
 interface AnimatedContentProps {
   children: ReactNode;
+  className?: string;
   distance?: number;
   direction?: "vertical" | "horizontal";
   reverse?: boolean;

@@ -17,9 +17,8 @@ export default function DefaultLayout({
         <Link
           isExternal
           className="flex items-center gap-1"
-          href="https://github.com/frontio-ai/heroui"
-        >
-          Get in touch
+          href="https://github.com/frontio-ai/heroui">
+          Comunicate con nosotros
         </Link>
       </footer>
     </div>
