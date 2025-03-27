@@ -26,6 +26,9 @@ export default {
         shine: 'shine 5s linear infinite',
         gradient: 'gradient 8s linear infinite',
       },
+      backgroundSize: {
+        '300%': '300%',
+      },
     },
   },
   darkMode: "class",
