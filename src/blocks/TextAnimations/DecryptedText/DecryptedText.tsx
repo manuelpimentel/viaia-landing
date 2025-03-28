@@ -38,7 +38,7 @@ export default function DecryptedText({
   const [isHovering, setIsHovering] = useState<boolean>(false);
   const [isScrambling, setIsScrambling] = useState<boolean>(false);
   const [revealedIndices, setRevealedIndices] = useState<Set<number>>(
-    new Set()
+    new Set(),
   );
   const [hasAnimated, setHasAnimated] = useState<boolean>(false);
   const containerRef = useRef<HTMLSpanElement>(null);
@@ -49,6 +49,7 @@ export default function DecryptedText({
 
     const getNextIndex = (revealedSet: Set<number>): number => {
       const textLength = text.length;
+
       switch (revealDirection) {
         case "start":
           return revealedSet.size;
@@ -70,6 +71,7 @@ export default function DecryptedText({
           for (let i = 0; i < textLength; i++) {
             if (!revealedSet.has(i)) return i;
           }
+
           return 0;
         }
         default:
@@ -83,7 +85,7 @@ export default function DecryptedText({
 
     const shuffleText = (
       originalText: string,
-      currentRevealed: Set<number>
+      currentRevealed: Set<number>,
     ): string => {
       if (useOriginalCharsOnly) {
         const positions = originalText.split("").map((char, i) => ({
@@ -99,6 +101,7 @@ export default function DecryptedText({
 
         for (let i = nonSpaceChars.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
+
           [nonSpaceChars[i], nonSpaceChars[j]] = [
             nonSpaceChars[j],
             nonSpaceChars[i],
@@ -106,10 +109,12 @@ export default function DecryptedText({
         }
 
         let charIndex = 0;
+
         return positions
           .map((p) => {
             if (p.isSpace) return " ";
             if (p.isRevealed) return originalText[p.index];
+
             return nonSpaceChars[charIndex++];
           })
           .join("");
@@ -119,6 +124,7 @@ export default function DecryptedText({
           .map((char, i) => {
             if (char === " ") return " ";
             if (currentRevealed.has(i)) return originalText[i];
+
             return availableChars[
               Math.floor(Math.random() * availableChars.length)
             ];
@@ -135,12 +141,15 @@ export default function DecryptedText({
             if (prevRevealed.size < text.length) {
               const nextIndex = getNextIndex(prevRevealed);
               const newRevealed = new Set(prevRevealed);
+
               newRevealed.add(nextIndex);
               setDisplayText(shuffleText(text, newRevealed));
+
               return newRevealed;
             } else {
               clearInterval(interval);
               setIsScrambling(false);
+
               return prevRevealed;
             }
           } else {
@@ -151,6 +160,7 @@ export default function DecryptedText({
               setIsScrambling(false);
               setDisplayText(text);
             }
+
             return prevRevealed;
           }
         });
@@ -195,9 +205,10 @@ export default function DecryptedText({
 
     const observer = new IntersectionObserver(
       observerCallback,
-      observerOptions
+      observerOptions,
     );
     const currentRef = containerRef.current;
+
     if (currentRef) {
       observer.observe(currentRef);
     }
@@ -220,7 +231,8 @@ export default function DecryptedText({
       ref={containerRef}
       className={`inline-block whitespace-pre-wrap ${parentClassName}`}
       {...hoverProps}
-      {...props}>
+      {...props}
+    >
       <span className="sr-only">{displayText}</span>
 
       <span aria-hidden="true">
@@ -231,7 +243,8 @@ export default function DecryptedText({
           return (
             <span
               key={index}
-              className={isRevealedOrDone ? className : encryptedClassName}>
+              className={isRevealedOrDone ? className : encryptedClassName}
+            >
               {char}
             </span>
           );

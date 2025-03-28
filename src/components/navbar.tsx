@@ -7,28 +7,29 @@ import {
   Button,
 } from "@heroui/react";
 
-export const AcmeLogo = () => {
-  return (
-    <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
-      <path
-        clipRule="evenodd"
-        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-        fill="currentColor"
-        fillRule="evenodd"
-      />
-    </svg>
-  );
-};
+export const AcmeLogo = () => (
+  <img src="/Vector-1.png" alt="Logo" width={36} height={36} />
+);
 
 export default function NavBar() {
   return (
-    <Navbar position="sticky">
+    <Navbar
+      className="fixed top-0 left-0 right-0 z-[9999] bg-[#fcfcfc]/70 backdrop-blur-md backdrop-saturate-150"
+      isBlurred={true}
+      maxWidth="full"
+      position="static"
+    >
       <NavbarBrand>
         <AcmeLogo />
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="bordered">
+          <Button 
+            as={Link} 
+            className="text-[#5C0087] border-[#5C0087] hover:bg-[#5C0087] hover:text-white"
+            href="#" 
+            variant="bordered"
+          >
             Ir a la App
           </Button>
         </NavbarItem>

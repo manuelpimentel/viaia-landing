@@ -21,15 +21,16 @@ const ShinyText: React.FC<ShinyTextProps> = ({
     <div
       className={`relative inline-block ${className}`}
       style={{
-        color: "rgba(64, 64, 64, 0.9)", // Color más oscuro aquí
-      }}>
+        color: "rgba(64, 64, 64, 0.9)",
+      }}
+    >
       {text}
       {!disabled && (
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)",
+              "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.8) 50%, transparent 100%)",
             backgroundSize: "200% 100%",
             animation: `shineEffect ${speed}s linear infinite`,
             mixBlendMode: "overlay",

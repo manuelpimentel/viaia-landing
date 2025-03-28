@@ -15,7 +15,7 @@ interface CircularTextProps {
 const getRotationTransition = (
   duration: number,
   from: number,
-  loop: boolean = true
+  loop: boolean = true,
 ) => ({
   from: from,
   to: from + 360,
@@ -101,12 +101,12 @@ const CircularText: React.FC<CircularTextProps> = ({
 
   return (
     <motion.div
-      initial={{ rotate: 0 }}
-      className={`mx-auto rounded-full w-[200px] h-[200px] text-white font-black text-center cursor-pointer origin-center ${className}`}
       animate={controls}
-      onUpdate={(latest) => setCurrentRotation(Number(latest.rotate))}
+      className={`mx-auto rounded-full w-[200px] h-[200px] text-[#fcfcfc] font-black text-center cursor-pointer origin-center ${className}`}
+      initial={{ rotate: 0 }}
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
+      onUpdate={(latest) => setCurrentRotation(Number(latest.rotate))}
     >
       {letters.map((letter, i) => {
         const rotation = (360 / letters.length) * i;

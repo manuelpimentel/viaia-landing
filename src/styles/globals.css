@@ -16,9 +16,36 @@
 
 @keyframes shineEffect {
   0% {
-      background-position: 200% 0;
+    background-position: 200% center;
   }
   100% {
-      background-position: -200% 0;
+    background-position: -200% center;
   }
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: shineEffect 3s linear infinite;
+}
+
+/* Estilos para el hover */
+.shine-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

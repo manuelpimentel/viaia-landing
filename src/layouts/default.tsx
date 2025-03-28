@@ -8,15 +8,15 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex flex-col h-screen">
+    <div className="relative min-h-screen">
       <NavBar />
-      <main className="container mx-auto max-w-7xl flex-grow pt-8">
+      <main className="pt-[64px]"> {/* Ajusta este valor según la altura de tu navbar */}
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
         <Link
           isExternal
-          className="flex items-center gap-1"
+          className="flex items-center gap-1 text-[#5C0087]"
           href="https://github.com/frontio-ai/heroui">
           Comunicate con nosotros
         </Link>
