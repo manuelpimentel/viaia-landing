@@ -55,13 +55,15 @@ export default function IndexPage() {
                 />
               </FadeContent>
             </div>
+          </div>
+          <div className="flex flex-col items-center justify-center  px-4 gap-4 bg-neutral-200 ">
             <div className="text-4xl pt-8 md:text-4xl lg:text-5xl">
               <GradientText
                 animationSpeed={10}
                 className="custom-class"
                 colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
                 showBorder={false}>
-                El tuyo empieza con un Prompt
+                Tu viaje empieza con un Prompt
               </GradientText>
               <p>💬</p>
             </div>
@@ -90,6 +92,7 @@ export default function IndexPage() {
               </AnimatedContent>
             </div>
           </div>
+
           <div className="bg-[#ffffff] w-full pb-3 px-8">
             <div className="text-4xl pt-6 md:text-4xl lg:text-5xl flex flex-col items-center justify-center text-center">
               <img
