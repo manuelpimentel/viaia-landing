@@ -26,7 +26,7 @@ export default function NavBar() {
         <NavbarItem>
           <Button 
             as={Link} 
-            className="text-[#5C0087] border-[#5C0087] hover:bg-[#5C0087] hover:text-white"
+            className="text-[#5C0087] border-[#5C0087] hover:bg-[#5C0087] hover:text-whit"
             href="#" 
             variant="bordered"
           >
