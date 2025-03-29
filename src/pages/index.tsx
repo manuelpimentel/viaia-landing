@@ -109,7 +109,7 @@ export default function IndexPage() {
               <p>🤓</p>
             </div>
             <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
-              <p>
+              <span>
                 Ya sea que estés planeando una escapada en solitario o un viaje
                 en grupo, todo sucede en el{" "}
                 <ShinyText
@@ -118,7 +118,7 @@ export default function IndexPage() {
                   speed={3}
                   text="Chat."
                 />
-              </p>
+              </span>
             </div>
             <div className="flex justify-center mt-7">
               <AnimatedContent>

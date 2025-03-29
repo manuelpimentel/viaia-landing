@@ -18,7 +18,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
   className = "",
 }) => {
   return (
-    <div
+    <span
       className={`relative inline-block ${className}`}
       style={{
         color: "rgba(64, 64, 64, 0.9)",
@@ -26,7 +26,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
     >
       {text}
       {!disabled && (
-        <div
+        <span
           className="absolute inset-0"
           style={{
             backgroundImage:
@@ -37,7 +37,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
           }}
         />
       )}
-    </div>
+    </span>
   );
 };
 
