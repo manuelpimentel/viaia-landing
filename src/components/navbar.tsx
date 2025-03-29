@@ -7,8 +7,8 @@ import {
   Button,
 } from "@heroui/react";
 
-export const AcmeLogo = () => (
-  <img src="/Vector-1.png" alt="Logo" width={36} height={36} />
+export const ViaiaLogo = () => (
+  <img alt="Logo" height={36} src="/Vector-1.png" width={36} />
 );
 
 export default function NavBar() {
@@ -20,7 +20,7 @@ export default function NavBar() {
       position="static"
     >
       <NavbarBrand>
-        <AcmeLogo />
+        <ViaiaLogo />
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem>

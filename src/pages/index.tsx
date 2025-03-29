@@ -7,7 +7,7 @@ import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent
 import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
 import RotatingText from "@/blocks/TextAnimations/RotatingText/RotatingText";
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
-import { siteConfig } from "@/config/site";
+// import { siteConfig } from "@/config/site";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
 
