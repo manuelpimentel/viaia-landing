@@ -25,9 +25,9 @@ export default function NavBar() {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button 
-            as={Link} 
-            className="text-[#5C0087] border-[#5C0087] hover:bg-[#5C0087] hover:text-whit"
-            href="#" 
+            as={Link}
+            className="text-[#5C0087] border-[#5C0087] hover:text-whit"
+            href="https://develop.d3nxc1lbjgfulz.amplifyapp.com/"
             variant="bordered"
           >
             Ir a la App
