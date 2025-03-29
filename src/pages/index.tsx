@@ -23,7 +23,8 @@ const textsRotating = [
   "Transporte",
   "Salidas",
   "Aventuras",
-  "Planes",
+  "Itinerarios",
+  "Pagos",
 ];
 
 export default function IndexPage() {
@@ -31,7 +32,7 @@ export default function IndexPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 md:py-4">
         <div className="inline-block max-w-full mt-52 text-center justify-center">
-          <div className="bg-gradient-to-b from-[#fff] to-[#fcfcfc] w-full pb-3 px-4">
+          <div className="bg-gradient-to-b from-[#fff] to-[#e9e9e9] w-full pb-3 px-4">
             <SplitText
               className="text-5xl font-bold md:text-5xl lg:text-6xl"
               delay={50}
@@ -90,7 +91,7 @@ export default function IndexPage() {
             </div>
           </div>
           <div className="bg-[#ffffff] w-full pb-3 px-8">
-            <div className="text-4xl pt-10 md:text-4xl lg:text-5xl flex flex-col items-center justify-center text-center">
+            <div className="text-4xl pt-6 md:text-4xl lg:text-5xl flex flex-col items-center justify-center text-center">
               <img
                 alt="Logo"
                 className="mb-2"
