@@ -30,8 +30,8 @@ const textsRotating = [
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 md:py-4">
-        <div className="inline-block max-w-full mt-52 text-center justify-center">
+      <section className="flex flex-col items-center justify-center gap-4 md:py-4 overflow-x-hidden">
+        <div className="inline-block w-full mt-52 text-center justify-center">
           <div className="bg-gradient-to-b from-[#fff] to-[#e9e9e9] w-full pb-3 px-4">
             <SplitText
               className="text-5xl font-bold md:text-5xl lg:text-6xl"
@@ -149,20 +149,15 @@ export default function IndexPage() {
               />
             </div>
           </div>
-          <div className="flex gap-4 justify-center my-4">
-            <Chip
-              className="relative overflow-hidden cursor-pointer transition-all hover:scale-105 bg-gray-50 border-2 border-gray-200 "
-              style={{
-                padding: "16px 24px",
-                borderRadius: "999px",
-              }}>
-              <ShinyText
-                className="text-gray-800  font-semibold text-lg"
-                disabled={false}
-                speed={10}
-                text="¡Muy pronto!"
-              />
-            </Chip>
+          <div className="flex justify-center my-4">
+            <div className="flex gap-3">
+              <Link
+                isExternal
+                className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
+                href="https://develop.d3nxc1lbjgfulz.amplifyapp.com/">
+                Ir a la App
+              </Link>
+            </div>
           </div>
           <div className="flex justify-center gap-2 align-content-center text-xl md:text-4xl lg:text-5xl">
             <div>
@@ -182,6 +177,21 @@ export default function IndexPage() {
               texts={textsRotating}
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
             />
+          </div>
+          <div className="flex gap-4 justify-center my-4">
+            <Chip
+              className="relative overflow-hidden cursor-pointer transition-all hover:scale-105 bg-gray-50 border-2 border-gray-200 "
+              style={{
+                padding: "16px 24px",
+                borderRadius: "999px",
+              }}>
+              <ShinyText
+                className="text-gray-800  font-semibold text-lg"
+                disabled={false}
+                speed={10}
+                text="¡Muy pronto!"
+              />
+            </Chip>
           </div>
         </div>
         {/* Blur */}
@@ -341,14 +351,6 @@ export default function IndexPage() {
               <p>😎</p>
             </div>
           </div>
-        </div>
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
-            href="https://develop.d3nxc1lbjgfulz.amplifyapp.com/">
-            Ir a la App
-          </Link>
         </div>
       </section>
     </DefaultLayout>
