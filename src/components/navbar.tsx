@@ -14,7 +14,7 @@ export const ViaiaLogo = () => (
 export default function NavBar() {
   return (
     <Navbar
-      className="fixed top-0 left-0 right-0 z-[9999] bg-[#fcfcfc]/70 backdrop-blur-md backdrop-saturate-150"
+      className="fixed top-0 left-0 right-0 z-[9999] bg-[#ffffff]/70 backdrop-blur-md backdrop-saturate-150"
       isBlurred={true}
       maxWidth="full"
       position="static"
@@ -24,7 +24,7 @@ export default function NavBar() {
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button 
+          <Button
             as={Link}
             className="text-[#5C0087] border-[#5C0087] hover:text-whit"
             href="https://develop.d3nxc1lbjgfulz.amplifyapp.com/"
