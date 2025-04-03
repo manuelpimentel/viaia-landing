@@ -157,7 +157,7 @@ export default function IndexPage() {
               <Link
                 isExternal
                 className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
-                href="https://develop.d3nxc1lbjgfulz.amplifyapp.com/">
+                href="https://app.esviaia.com/">
                 Ir a la App
               </Link>
             </div>

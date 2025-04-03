@@ -27,7 +27,7 @@ export default function NavBar() {
           <Button
             as={Link}
             className="text-[#5C0087] border-[#5C0087] hover:text-whit"
-            href="https://develop.d3nxc1lbjgfulz.amplifyapp.com/"
+            href="https://app.esviaia.com/"
             variant="bordered"
           >
             Ir a la App
