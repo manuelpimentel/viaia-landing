@@ -63,16 +63,23 @@ export default function IndexPage() {
                 <GradientText
                   animationSpeed={10}
                   className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
-                  Tu viaje empieza con un Prompt
+                  colors={[
+                    "#2E005D",
+                    "#5C0087",
+                    "#8A0087",
+                    "#FF6200",
+                    "#FF8000",
+                  ]}
+                  showBorder={false}
+                >
+                  Tu viaje empieza con un mensaje
                 </GradientText>
                 <p>💬</p>
               </div>
               <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
                 <p>
-                  Sin mil pestañas abiertas. Solo tú, tus ideas y un espacio donde
-                  todo fluye.
+                  Sin mil pestañas abiertas. Solo tú, tus ideas y un espacio
+                  donde todo fluye.
                 </p>
               </div>
               <div className="flex justify-center flex-col gap-4 mt-7">
@@ -107,16 +114,23 @@ export default function IndexPage() {
                 <GradientText
                   animationSpeed={10}
                   className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
+                  colors={[
+                    "#2E005D",
+                    "#5C0087",
+                    "#8A0087",
+                    "#FF6200",
+                    "#FF8000",
+                  ]}
+                  showBorder={false}
+                >
                   escucha, sugiere y se adapta.
                 </GradientText>
                 <p>🤓</p>
               </div>
               <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
                 <span>
-                  Ya sea que estés planeando una escapada en solitario o un viaje
-                  en grupo, todo sucede en el{" "}
+                  Ya sea que estés planeando una escapada en solitario o un
+                  viaje en grupo, todo sucede en el{" "}
                   <ShinyText
                     className="text-gray-800 font-bold bg-transparent"
                     disabled={false}
@@ -159,7 +173,8 @@ export default function IndexPage() {
                 <Link
                   isExternal
                   className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
-                  href="https://app.esviaia.com/">
+                  href="https://app.esviaia.com/"
+                >
                   Ir a la App
                 </Link>
               </div>
@@ -189,7 +204,8 @@ export default function IndexPage() {
                 style={{
                   padding: "16px 24px",
                   borderRadius: "999px",
-                }}>
+                }}
+              >
                 <ShinyText
                   className="text-gray-800  font-semibold text-lg"
                   disabled={false}
@@ -349,8 +365,15 @@ export default function IndexPage() {
                 <GradientText
                   animationSpeed={10}
                   className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
+                  colors={[
+                    "#2E005D",
+                    "#5C0087",
+                    "#8A0087",
+                    "#FF6200",
+                    "#FF8000",
+                  ]}
+                  showBorder={false}
+                >
                   VIAIA ya está lista. Solo faltas tú.
                 </GradientText>
                 <p>😎</p>
