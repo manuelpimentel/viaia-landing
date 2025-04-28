@@ -11,6 +11,7 @@ import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
 import MobileOnly from "@/components/MobileOnly";
+import posthog from "posthog-js";
 
 const textsVelocity = [
   "Alojamientos Experiencias Actividades Transporte Organización",
@@ -172,6 +173,11 @@ export default function IndexPage() {
               <div className="flex gap-3">
                 <Link
                   isExternal
+                  onPress={() => {
+                    {
+                      posthog.capture("button_clicked", { property: "to_app" });
+                    }
+                  }}
                   className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
                   href="https://app.esviaia.com/"
                 >

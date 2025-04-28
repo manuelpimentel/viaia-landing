@@ -6,6 +6,7 @@ import {
   Link,
   Button,
 } from "@heroui/react";
+import posthog from "posthog-js";
 
 export const ViaiaLogo = () => (
   <img alt="Logo" height={36} src="/Vector-1.png" width={36} />
@@ -26,6 +27,11 @@ export default function NavBar() {
         <NavbarItem>
           <Button
             as={Link}
+            onPress={() => {
+              {
+                posthog.capture("button_clicked", { property: "to_app" });
+              }
+            }}
             className="text-[#5C0087] border-[#5C0087] hover:text-whit"
             href="https://app.esviaia.com/"
             variant="bordered"
