@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       options={{
         api_host: "https://us.i.posthog.com",
         debug: import.meta.env.MODE === "development",
+        autocapture: true,
       }}
     >
       <BrowserRouter>
@@ -22,5 +23,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </Provider>
       </BrowserRouter>
     </PostHogProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
