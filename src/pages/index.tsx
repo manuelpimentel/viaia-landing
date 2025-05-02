@@ -1,5 +1,7 @@
 import { Link } from "@heroui/link";
 import { Chip } from "@heroui/react";
+import posthog from "posthog-js";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 import DefaultLayout from "@/layouts/default";
@@ -11,7 +13,6 @@ import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
 import MobileOnly from "@/components/MobileOnly";
-import posthog from "posthog-js";
 
 const textsVelocity = [
   "Alojamientos Experiencias Actividades Transporte Organización",
@@ -39,27 +40,91 @@ export default function IndexPage() {
               <SplitText
                 className="text-5xl font-bold md:text-5xl lg:text-6xl"
                 delay={50}
-                text="¡Hola viajero!"
+                text="¡Hola, viajero!"
               />
-              <div className="text-4xl pt-72 md:text-4xl lg:text-5xl">
+              <div className="text-center mt-20 px-4">
+                <div className="text-4xl pt-20 md:text-4xl lg:text-5xl flex flex-col items-center justify-center text-center">
+                  <GradientText
+                    animationSpeed={10}
+                    className="custom-class"
+                    colors={[
+                      "#2E005D",
+                      "#5C0087",
+                      "#8A0087",
+                      "#FF6200",
+                      "#FF8000",
+                    ]}
+                    showBorder={false}
+                  >
+                    Atrévete a descubrir como nunca antes.
+                  </GradientText>
+                </div>
+                <div className="mt-4 flex flex-col items-center gap-4">
+                  {/* Botón principal - Web App */}
+                  <a
+                    className="bg-white border-2 border-[#5C0087] hover:scale-105 transition-transform duration-300 rounded-full px-6 py-3 shadow-lg flex items-center justify-center"
+                    href="https://app.esviaia.com/"
+                  >
+                    <GradientText
+                      animationSpeed={5}
+                      className="text-lg font-bold"
+                      colors={[
+                        "#2E005D",
+                        "#FF6200",
+                        "#5C0087",
+                        "#FF8000",
+                        "#8A0087",
+                      ]}
+                      showBorder={false}
+                    >
+                      Probar Viaia ahora
+                    </GradientText>
+                    <p>✨</p>
+                  </a>
+
+                  {/* Botones deshabilitados - App Store y Google Play */}
+                  <Chip
+                    className="relative overflow-hidden cursor-pointer transition-all hover:scale-105 bg-gray-50 border-2 border-gray-200 "
+                    style={{
+                      padding: "16px 24px",
+                      borderRadius: "999px",
+                    }}
+                  >
+                    <ShinyText
+                      className="text-gray-800  font-semibold text-lg"
+                      disabled={false}
+                      speed={10}
+                      text="Próximamente"
+                    />
+                  </Chip>
+                  <div className="flex flex-col sm:flex-row gap-4 mt-1 justify-center items-center">
+                    <button
+                      disabled
+                      className="bg-gray-300 text-gray-500 py-2 px-4 rounded-lg flex items-center gap-2 cursor-not-allowed opacity-70"
+                    >
+                      <FaApple className="w-5 h-5" />
+                      App Store
+                    </button>
+                    <button
+                      disabled
+                      className="bg-gray-300 text-gray-500 py-2 px-4 rounded-lg flex items-center gap-2 cursor-not-allowed opacity-70"
+                    >
+                      <FaGooglePlay className="w-5 h-5" />
+                      Google Play
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-20 md:text-4xl lg:text-5xl">
                 <SplitText
                   className="text-3xl pt-10 md:text-4xl lg:text-5xl"
                   delay={50}
-                  text="Algunos viajes empiezan con un mapa"
+                  text="Explorar sin límites es el nuevo destino"
                 />
-                <p>🗺️</p>
-              </div>
-              <div className="flex justify-center mt-7">
-                <FadeContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-70"
-                    src="/InputChat2.png"
-                  />
-                </FadeContent>
+                <p className="text-4xl">🗺️</p>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center  px-4 gap-4 bg-neutral-200 ">
+            <div className="flex flex-col items-center justify-center  px-4 gap-4 bg-neutral-100 ">
               <div className="text-4xl pt-8 md:text-4xl lg:text-5xl">
                 <GradientText
                   animationSpeed={10}
@@ -76,6 +141,15 @@ export default function IndexPage() {
                   Tu viaje empieza con un mensaje
                 </GradientText>
                 <p>💬</p>
+              </div>
+              <div className="flex justify-center mt-7">
+                <FadeContent>
+                  <img
+                    alt="Chat interface illustration"
+                    className="w-70"
+                    src="/InputChat2.png"
+                  />
+                </FadeContent>
               </div>
               <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
                 <p>
@@ -173,13 +247,13 @@ export default function IndexPage() {
               <div className="flex gap-3">
                 <Link
                   isExternal
+                  className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
+                  href="https://app.esviaia.com/"
                   onPress={() => {
                     {
                       posthog.capture("button_clicked", { property: "to_app" });
                     }
                   }}
-                  className="bg-[#FF6200] text-white hover:bg-[#FF6200]/90 rounded-full shadow-lg px-8 py-2 transition-all"
-                  href="https://app.esviaia.com/"
                 >
                   Ir a la App
                 </Link>
@@ -380,7 +454,7 @@ export default function IndexPage() {
                   ]}
                   showBorder={false}
                 >
-                  VIAIA ya está lista. Solo faltas tú.
+                  Viaia ya está lista. Solo faltas tú.
                 </GradientText>
                 <p>😎</p>
               </div>

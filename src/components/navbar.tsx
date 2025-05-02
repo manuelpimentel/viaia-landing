@@ -27,14 +27,14 @@ export default function NavBar() {
         <NavbarItem>
           <Button
             as={Link}
+            className="text-[#007A8A] border-[#007A8A] hover:text-whit"
+            href="https://app.esviaia.com/"
+            variant="bordered"
             onPress={() => {
               {
                 posthog.capture("button_clicked", { property: "to_app" });
               }
             }}
-            className="text-[#5C0087] border-[#5C0087] hover:text-whit"
-            href="https://app.esviaia.com/"
-            variant="bordered"
           >
             Ir a la App
           </Button>
