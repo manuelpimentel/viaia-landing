@@ -36,7 +36,8 @@ export default function MobileOnly({
       {/* Contenido principal - Contenedor flexible */}
       <div className="flex-1 flex flex-col bg-[#fcfcfc]">
         {/* Título */}
-        <div className="text-center px-6 sm:px-10 md:px-20 py-8">
+        <img alt="Viaia" className="mx-auto w-48 pt-10" src="/Vector-2.png" />
+        <div className="text-center px-6 sm:px-10 md:px-20 pb-8 pt-4">
           <GradientText
             animationSpeed={10}
             className="custom-class text-4xl sm:text-5xl md:text-6xl"
@@ -48,7 +49,7 @@ export default function MobileOnly({
         </div>
 
         {/* Sección Dividida - Usa flex-1 para ocupar espacio disponible */}
-        <div className="flex flex-col lg:flex-row items-center justify-center p-6 sm:p-8 lg:p-6 gap-8 lg:gap-4 flex-1">
+        <div className="flex flex-col lg:flex-row items-center justify-center p-6 sm:p-0 lg:px-6 gap-8 lg: flex-1">
           {/* Columna izquierda (Imagen) */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-4 lg:mb-0 lg:pr-4">
             <img
