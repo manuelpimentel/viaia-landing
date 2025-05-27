@@ -25,7 +25,7 @@ export default function MobileOnly({
   }
 
   return (
-    <div className="flex flex-col h-screen overflow-auto lg:overflow-hidden">
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
       {/* Navbar Fijo */}
       <div className="sticky top-0 w-full bg-[#fcfcfc] dark:bg-[#1a1a1a] z-10">
         <div className="max-w-md mx-auto text-center py-4">
@@ -34,7 +34,7 @@ export default function MobileOnly({
       </div>
 
       {/* Contenido principal - Contenedor flexible */}
-      <div className="flex-1 flex flex-col bg-[#fcfcfc]">
+      <div className="flex-1 flex flex-col bg-[#fcfcfc] w-full">
         {/* Título */}
         <img alt="Viaia" className="mx-auto w-48 pt-10" src="/Vector-2.png" />
         <div className="text-center px-6 sm:px-10 md:px-20 pb-8 pt-4">
@@ -47,9 +47,8 @@ export default function MobileOnly({
             La primera IA de turismo en Venezuela
           </GradientText>
         </div>
-
         {/* Sección Dividida - Usa flex-1 para ocupar espacio disponible */}
-        <div className="flex flex-col lg:flex-row items-center justify-center p-6 sm:p-0 lg:px-6 gap-8 lg: flex-1">
+        <div className="flex flex-col lg:flex-row items-center justify-center p-4 sm:p-2 lg:px-6 gap-6 lg:gap-8 w-full max-w-7xl mx-auto lg:flex-1">
           {/* Columna izquierda (Imagen) */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-4 lg:mb-0 lg:pr-4">
             <img
@@ -81,6 +80,13 @@ export default function MobileOnly({
                 <p className="mt-2 text-center text-sm lg:text-base">
                   Aplicación web
                 </p>
+                <div className="w-24 h-6 mt-1">
+                  <img
+                    alt="Vector 4"
+                    className="w-full h-full object-contain"
+                    src="/Vector-4.png"
+                  />
+                </div>
               </div>
               {/* Segundo QR */}
               <div className="flex flex-col items-center">
@@ -94,8 +100,31 @@ export default function MobileOnly({
                 <p className="mt-2 text-center text-sm lg:text-base">
                   Descubre Viaia
                 </p>
+                <div className="w-24 h-6 mt-1">
+                  <img
+                    alt="Vector 6"
+                    className="w-full h-full object-contain"
+                    src="/Vector-6.png"
+                  />
+                </div>
               </div>
             </div>
+            <a
+              className="bg-white border-2 border-[#5C0087] my-4 hover:scale-105 transition-transform duration-300 rounded-full px-8 sm:px-[4.2rem] py-2 sm:py-3 shadow-lg flex items-center justify-center max-w-xs mx-auto md:hidden"
+              href="https://app.esviaia.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <GradientText
+                animationSpeed={5}
+                className="text-base sm:text-lg font-bold"
+                colors={["#2E005D", "#FF6200", "#5C0087", "#FF8000", "#8A0087"]}
+                showBorder={false}
+              >
+                Probar Viaia ahora
+              </GradientText>
+              <p className="ml-2">✨</p>
+            </a>
           </div>
         </div>
       </div>
