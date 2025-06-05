@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
+import { PricingTiers } from "./pricing";
+
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 
 export default function MobileOnly({
@@ -128,6 +130,8 @@ export default function MobileOnly({
           </div>
         </div>
       </div>
+
+      <PricingTiers />
 
       {/* Footer */}
       <footer className="w-full bg-[#fcfcfc] dark:bg-[#1a1a1a] px-4 py-3 border-t border-gray-200 dark:border-gray-800">

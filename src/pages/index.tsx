@@ -12,6 +12,7 @@ import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
 import MobileOnly from "@/components/MobileOnly";
+import { PricingTiers } from "@/components/pricing";
 
 const textsVelocity = [
   "Alojamientos Experiencias Actividades Transporte Organización",
@@ -524,6 +525,7 @@ export default function IndexPage() {
               </div>
             </div>
           </div>
+          <PricingTiers />
         </section>
       </DefaultLayout>
     </MobileOnly>
