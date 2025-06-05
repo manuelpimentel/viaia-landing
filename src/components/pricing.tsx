@@ -115,6 +115,14 @@ export const PricingTiers: React.FC = () => {
           al siguiente nivel
         </p>
       </div>
+      <div className="flex justify-center mb-12">
+        <div className="inline-flex items-center gap-3 bg-content2 px-4 py-2 rounded-full">
+          <Icon className="text-[#0078A8]" icon="lucide:calendar" />
+          <span className="text-sm font-medium">
+            Oferta por tiempo limitado - 50% de descuento
+          </span>
+        </div>
+      </div>
       <div className="grid px-10 grid-cols-1 md:grid-cols-3 gap-4">
         {tiers.map((tier, index) => (
           <Card
@@ -165,14 +173,19 @@ export const PricingTiers: React.FC = () => {
           </Card>
         ))}
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 flex-col items-center">
         <Button
           className="bg-[#0078A8] text-white hover:bg-[#0088C2] shining-border"
           size="lg"
           variant="solid"
+          onPress={() => (window.location.href = "https://wa.me/584248005957")}
         >
-          Contactanos
+          Contáctanos
         </Button>
+        <p className="text-center text-foreground-500 max-w-xl mt-6">
+          ¿Necesitas un plan personalizado para tu empresa? Contáctanos para
+          crear una solución a medida.
+        </p>
       </div>
     </div>
   );
