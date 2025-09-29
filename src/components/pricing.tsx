@@ -47,92 +47,84 @@ type PricingTier = {
 export const PricingTiers: React.FC = () => {
   const tiers: PricingTier[] = [
     {
-      name: "Gratis",
-      originalPrice: 29.99,
-      discountedPrice: 0.0,
-      description: "Todo lo esencial para empezar con nuestros productos.",
-      features: [
-        "Acceso a funciones básicas",
-        "Soporte por correo electrónico",
-        "Visibilidad en Viaia",
-        "Acceso al Certificado Viaia",
-        "Actualizaciones mensuales",
-        "1 usuarios incluidos con acceso a Whatsapp",
-      ],
-      icon: "lucide:package",
-    },
-    {
-      name: "Profesional",
+      name: "FrontDesk",
       originalPrice: 59.99,
       discountedPrice: 29.99,
-      description: "Perfecto para profesionales y equipos pequeños.",
+      description: "Tu agente de IA turístico disponible 24/7.",
       features: [
-        "Todo lo del plan Gratuito",
-        "Funciones avanzadas",
-        "Soporte prioritario",
-        "Visibilidad en Viaia",
-        "Acceso al Certificado Viaia",
-        "Actualizaciones semanales",
-        "3 usuarios incluidos con acceso a Whatsapp",
+        "Atención automática 24/7 a potenciales clientes",
+        "Respuestas a dudas y orientación a la reserva",
+        "Invitación conversacional a generar reservas",
+        "Certificado VIAIA (insignia de servicio validado)",
+        "Validación de datos y métodos de gestión",
+        "Notificación de leads vía WhatsApp",
       ],
-      isPopular: true,
-      icon: "lucide:briefcase",
+      icon: "lucide:bot",
     },
     {
-      name: "Empresarial",
-      originalPrice: 199.99,
-      discountedPrice: 99.99,
-      description: "Soluciones completas para empresas de cualquier tamaño.",
+      name: "FrontDesk + BackOffice",
+      originalPrice: 99.99,
+      discountedPrice: 49.99,
+      description: "Todo lo del FrontDesk con gestión completa de tu servicio.",
       features: [
-        "Todo lo del plan Profesional",
-        "Funciones exclusivas",
-        "Soporte exclusivo",
-        "Visibilidad en Viaia",
-        "Acceso al Certificado Viaia",
-        "Actualizaciones diarias",
-        "10 usuarios incluidos con acceso a Whatsapp",
-        "Acceso a la API",
+        "Incluye todo lo de FrontDesk",
+        "Dashboard de leads y reservas",
+        "Gestión de datos relevantes de tu servicio",
+        "Control de información, precios y fotos",
+        "Gestión de la disponibilidad y reservas",
+        "Soporte prioritario",
       ],
-      icon: "lucide:building",
+      isPopular: true,
+      icon: "lucide:layout-dashboard",
     },
   ];
 
   return (
     <div className="w-full py-12 px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <div className="text-center mb-10 px-4">
+        <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
           <GradientText
-            animationSpeed={10}
-            className="text-4xl md:text-5xl font-extrabold"
+            animationSpeed={8}
+            className="text-5xl md:text-6xl font-black tracking-tight"
             colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-            showBorder={false}
+            showBorder={true}
           >
             Haz crecer tu servicio con Viaia
           </GradientText>
         </h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Elige el plan que mejor se adapte a tus necesidades y lleva tu negocio
-          al siguiente nivel
+
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Lleva tu negocio turístico al siguiente nivel con planes diseñados
+          para potenciar tu alcance, certificar tu servicio y atraer más
+          clientes.{" "}
+          <span className="font-bold text-[#007A8A]">
+            Es tu momento de destacar.
+          </span>
         </p>
+      </div>
+      <div className="flex justify-center mb-6">
+        <h3 className="text-4xl font-extrabold text-[#007A8A]">
+          Descubre nuestros precios
+        </h3>
       </div>
       <div className="flex justify-center mb-12">
         <div className="inline-flex items-center gap-3 bg-content2 px-4 py-2 rounded-full">
-          <Icon className="text-[#0078A8]" icon="lucide:calendar" />
+          <Icon className="text-[#007A8A]" icon="lucide:calendar" />
           <span className="text-sm font-medium">
-            Oferta por tiempo limitado - 50% de descuento
+            Oferta por tiempo limitado - 50% de descuento los primeros 2 meses
           </span>
         </div>
       </div>
-      <div className="grid px-10 grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid px-4 md:px-10 grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {tiers.map((tier, index) => (
           <Card
             key={index}
-            className={`border-2 relative ${tier.isPopular ? "border-[#0078A8] shining-border" : "border-default-200"} overflow-visible transition-all duration-300`}
+            className={`border-2 relative ${tier.isPopular ? "border-[#007A8A] shining-border" : "border-default-200"} overflow-visible transition-all duration-300`}
           >
             {tier.isPopular && (
               <div className="absolute -top-3 left-0 right-0 flex justify-center">
                 <Chip
-                  className="h-6 bg-[#0078A8] text-white border-2 border-white/50 shining-chip"
+                  className="h-6 bg-[#007A8A] text-white border-2 border-white/50 shining-chip"
                   variant="shadow"
                 >
                   Más popular
@@ -142,7 +134,7 @@ export const PricingTiers: React.FC = () => {
             <CardHeader className="flex gap-3 pb-0 pt-6">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
-                  <Icon className="text-2xl text-[#0078A8]" icon={tier.icon} />
+                  <Icon className="text-2xl text-[#007A8A]" icon={tier.icon} />
                   <h3 className="text-xl font-bold">{tier.name}</h3>
                 </div>
                 <p className="text-small text-foreground-500">
@@ -175,7 +167,7 @@ export const PricingTiers: React.FC = () => {
       </div>
       <div className="flex justify-center mt-10 flex-col items-center">
         <Button
-          className="bg-[#0078A8] text-white hover:bg-[#0088C2] shining-border"
+          className="bg-[#007A8A] text-white hover:bg-[#0088C2] shining-border"
           size="lg"
           variant="solid"
           onPress={() => (window.location.href = "https://wa.me/584248005957")}
@@ -183,8 +175,7 @@ export const PricingTiers: React.FC = () => {
           Contáctanos
         </Button>
         <p className="text-center text-foreground-500 max-w-xl mt-6">
-          ¿Necesitas un plan personalizado para tu empresa? Contáctanos para
-          crear una solución a medida.
+          Queremos conocerte. Contáctanos para más información.
         </p>
       </div>
     </div>
