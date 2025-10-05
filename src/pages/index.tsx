@@ -154,15 +154,15 @@ export default function IndexPage() {
                     ]}
                     showBorder={false}
                   >
-                    Tu viaje empieza con un mensaje
+                    Descubrir empieza con un mensaje
                   </GradientText>
                   <p>💬</p>
                 </div>
 
                 <div className="text-2xl md:text-3xl lg:text-4xl text-center max-w-3xl">
                   <p>
-                    En la barra de chat podrás contarnos todo lo que buscas en
-                    tu viaje.
+                    En la barra de chat podrás contarnos todo lo que deseas
+                    explorar.
                   </p>
                 </div>
 
@@ -173,11 +173,13 @@ export default function IndexPage() {
                       Ejemplos de lo que puedes preguntar:
                     </p>
                     <ul className="space-y-3 text-neutral-800 text-base md:text-lg">
-                      <li>🗺️ ¿Qué puedo hacer en Mérida?</li>
-                      <li>🏕️ Plan de aventura en Canaima</li>
-                      <li>🏖️ Posadas cerca de la playa en Choroní</li>
-                      <li>👨‍👩‍👧 Viaje familiar: ¿qué recomiendas?</li>
-                      <li>🚐 Transporte de Caracas a Lechería</li>
+                      <li>🌄 Lugares que ver en Mérida</li>
+                      <li>🏕️ Aventura en Canaima</li>
+                      <li>🏖️ Posadas en Choroní</li>
+                      <li>🚐 Transporte Caracas–Lechería</li>
+                      <li>🍽️ Dónde comer en Margarita</li>
+                      <li>🎟️ Tours disponibles</li>
+                      <li>💡 Sugiéreme un destino</li>
                     </ul>
                   </div>
                 </div>
@@ -218,22 +220,15 @@ export default function IndexPage() {
                 </div>
               </div>
 
-              <div className="flex justify-center flex-col gap-4 mt-7 px-6 w-full max-w-3xl">
+              <div className="flex justify-center items-center flex-col gap-4 mt-7 pb-4 px-6 w-full max-w-3xl mx-auto">
                 <AnimatedContent>
-                  <div className="flex justify-end">
+                  <div className="flex justify-center w-full">
                     <img
                       alt="Chat interface illustration"
-                      className="w-3/4"
+                      className="w-3/4 max-w-md"
                       src="/MensajeUser.png"
                     />
                   </div>
-                </AnimatedContent>
-                <AnimatedContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-70"
-                    src="/RespuestaViaia.png"
-                  />
                 </AnimatedContent>
               </div>
             </div>
@@ -287,7 +282,7 @@ export default function IndexPage() {
               </div>
             </div>
 
-            <div className="bg-[#fff] w-full pb-10 px-6">
+            <div className="bg-[#fff] pb-10 px-6">
               <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
                 Tan fácil como preguntarle a quien realmente sabe a dónde ir.
               </div>
@@ -295,7 +290,7 @@ export default function IndexPage() {
                 <AnimatedContent>
                   <img
                     alt="Chat interface illustration"
-                    className="w-70 rounded-xl"
+                    className="w-70 rounded-md"
                     src="/DETAIL.png"
                   />
                 </AnimatedContent>
@@ -355,140 +350,13 @@ export default function IndexPage() {
                   className="text-gray-800  font-semibold text-lg"
                   disabled={false}
                   speed={10}
-                  text="¡Muy pronto!"
+                  text="¡Muy pronto más!"
                 />
               </Chip>
             </div>
           </div>
           {/* Blur */}
           <div className="bg-gradient-to-b from-[#fcfcfc] to-gray-200/50 w-full pb-3 px-8 opacity-50 blur-md">
-            {/* <div className="bg-gradient-to-b from-[#fcfcfc] to-gray-100/50 w-full pb-3 px-8">
-              <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
-                Adiós a las notas sueltas y los links que se pierden🌪️
-              </div>
-              <div className="flex justify-center mt-7">
-                <AnimatedContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-full"
-                    src="/orden.png"
-                  />
-                </AnimatedContent>
-              </div>
-              <p className="text-2xl text-left pl-10 py-10 md:text-4xl lg:text-5xl font-light leading-relaxed tracking-wide">
-                🗓️ Elige fechas <br />
-                💰 Define un presupuesto <br />
-                👥 Invita a amigos
-              </p>
-              <div className="flex justify-center">
-                <AnimatedContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-full"
-                    src="/config.png"
-                  />
-                </AnimatedContent>
-              </div>
-              <div className="text-4xl pt-10 md:text-4xl lg:text-5xl">
-                <GradientText
-                  animationSpeed={10}
-                  className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
-                  VIAIA organiza todo mientras tú piensas en la aventura.
-                </GradientText>
-                <p>🥾</p>
-              </div>
-              <div className="flex justify-center">
-                <AnimatedContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-full"
-                    src="/friend.png"
-                  />
-                </AnimatedContent>
-              </div>
-              <p className="text-xl pb-2 pt-6 md:text-4xl lg:text-5xl">
-                Con VIAIA, todos pueden proponer, votar y ajustar detalles en un
-                solo espacio.
-              </p>
-              <p className="text-2xl text-left pl-8 py-10 md:text-4xl lg:text-5xl font-light leading-relaxed tracking-wide">
-                🚫 ¿Dónde nos quedamos? <br />
-                🚫 ¿Alguien reservó esto? <br />✅ Todo está ahí, listo para que
-                el viaje fluya.
-              </p>
-              <div className="text-4xl pt10 md:text-4xl lg:text-5xl">
-                <GradientText
-                  animationSpeed={10}
-                  className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
-                  Viajar en grupo no debería sentirse como coordinar una logística
-                  imposible.
-                </GradientText>
-                <p>🥾</p>
-              </div>
-              <div className="py-8">
-                <SplitText
-                  className="text-4xl font-bold md:text-5xl lg:text-6xl"
-                  delay={50}
-                  text="¡El Planner lo tiene todo y más!"
-                />
-              </div>
-            </div>
-            <div className="bg-gradient-to-b from-[#fcfcfc] to-gray-100/50 w-full pb-3 px-8">
-              <div className="text-4xl pt10 md:text-4xl lg:text-5xl">
-                <GradientText
-                  animationSpeed={10}
-                  className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
-                  Reservar Sin Estrés, solo con Emoción
-                </GradientText>
-                <p>🤩</p>
-              </div>
-              <p className="text-2xl text-left pl-8 py-10 md:text-4xl lg:text-5xl font-light leading-relaxed tracking-wide">
-                🛒 Elige lo que te gusta. <br />
-                📑 Revisa los detalles. <br />
-                💳 Paga solo o divide. <br />✅ Listo.
-              </p>
-              <div className="flex justify-center">
-                <AnimatedContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-70"
-                    src="/shopping.png"
-                  />
-                </AnimatedContent>
-              </div>
-              <p className="text-xl py-4 md:text-4xl lg:text-5xl">
-                Después de tu viaje, VIAIA te preguntará ¿Cómo estuvo?
-              </p>
-              <p className="text-2xl text-left pl-8 py-10 md:text-4xl lg:text-5xl font-light leading-relaxed tracking-wide">
-                📝 Deja una calificación <br />
-                💬 Unas palabras si quieres. <br />
-                ✨ Eso es todo. <br />
-              </p>
-              <div className="text-4xl pt10 md:text-4xl lg:text-5xl">
-                <GradientText
-                  animationSpeed={10}
-                  className="custom-class"
-                  colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
-                  showBorder={false}>
-                  Tu experiencia ayuda a hacer VIAIA más inteligente.
-                </GradientText>
-                <p>🫶</p>
-              </div>
-              <div className="flex justify-center">
-                <AnimatedContent>
-                  <img
-                    alt="Chat interface illustration"
-                    className="w-70"
-                    src="/review.png"
-                  />
-                </AnimatedContent>
-              </div>
-            </div> */}
             <div className="bg-gradient-to-b from-[#fcfcfc] to-gray-100/50 w-full pb-3 px-8">
               <div className="py-8">
                 <SplitText

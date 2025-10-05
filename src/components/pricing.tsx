@@ -103,7 +103,7 @@ export const PricingTiers: React.FC = () => {
         </p>
       </div>
       <div className="flex justify-center mb-6">
-        <h3 className="text-4xl font-extrabold text-[#007A8A]">
+        <h3 className="text-4xl font-extrabold text-[#007A8A] text-center">
           Descubre nuestros precios
         </h3>
       </div>
