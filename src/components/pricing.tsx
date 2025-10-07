@@ -48,8 +48,8 @@ export const PricingTiers: React.FC = () => {
   const tiers: PricingTier[] = [
     {
       name: "FrontDesk",
-      originalPrice: 59.99,
-      discountedPrice: 29.99,
+      originalPrice: 179.99,
+      discountedPrice: 89.99,
       description: "Tu agente de IA turístico disponible 24/7.",
       features: [
         "Atención automática 24/7 a potenciales clientes",
@@ -63,8 +63,8 @@ export const PricingTiers: React.FC = () => {
     },
     {
       name: "FrontDesk + BackOffice",
-      originalPrice: 99.99,
-      discountedPrice: 49.99,
+      originalPrice: 499.99,
+      discountedPrice: 249.99,
       description: "Todo lo del FrontDesk con gestión completa de tu servicio.",
       features: [
         "Incluye todo lo de FrontDesk",
