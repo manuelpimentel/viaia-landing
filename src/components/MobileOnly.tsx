@@ -140,7 +140,7 @@ export default function MobileOnly({
           <div className="flex items-center gap-4">
             <a
               className="text-green-500 hover:text-green-700 text-3xl transition-colors duration-300"
-              href="https://wa.me/584248005957"
+              href="https://wa.me/13075001620"
               rel="noopener noreferrer"
               target="_blank"
             >
