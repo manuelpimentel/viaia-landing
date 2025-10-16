@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Card, CardBody, CardHeader, Button, Chip } from "@heroui/react";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Button,
+  Chip,
+  Switch,
+} from "@heroui/react";
 import { Icon } from "@iconify/react";
 
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
@@ -42,6 +49,7 @@ type PricingTier = {
 export const PricingTiers: React.FC = () => {
   const [selectedCategory, setSelectedCategory] =
     useState<keyof typeof CATEGORY_STYLES>("ACCOMMODATION");
+  const [isAnnual, setIsAnnual] = useState<boolean>(false);
 
   const tiers: PricingTier[] = [
     {
@@ -177,9 +185,26 @@ export const PricingTiers: React.FC = () => {
         ))}
       </div>
 
-      {/* Cards centradas */}
+      {/* Toggle de precios mensual/anual */}
+      <div className="flex justify-center items-center gap-4 mb-8">
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          Mensual
+        </span>
+        <Switch
+          aria-label="Cambiar a precios anuales"
+          color="default"
+          isSelected={isAnnual}
+          size="lg"
+          onValueChange={setIsAnnual}
+        />
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Anual
+          </span>
+        </div>
+      </div>
       <div className="flex justify-center w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex flex-row justify-center gap-8 max-w-6xl w-full">
+        <div className="flex flex-col md:flex-row xl:flex-row justify-center items-stretch gap-8 max-w-7xl w-full">
           {filteredTiers.map((tier, index) => (
             <Card
               key={index}
@@ -213,16 +238,35 @@ export const PricingTiers: React.FC = () => {
               </CardHeader>
 
               <CardBody className="py-6 text-center">
-                <div className="flex justify-center items-baseline gap-2 mb-4">
+                <div className="flex justify-center items-baseline gap-2 mb-2">
                   <span className="text-3xl font-bold">
-                    ${tier.discountedPrice}
+                    $
+                    {isAnnual
+                      ? Math.round(tier.originalPrice * 12 * 0.8)
+                      : tier.originalPrice}
                   </span>
-                  <span className="line-through text-gray-500 text-sm">
-                    ${tier.originalPrice}
+                  <span className="text-danger text-sm font-medium">
+                    /{isAnnual ? "año" : "mes"}
                   </span>
-                  <span className="text-danger text-sm font-medium">/mes</span>
                 </div>
 
+                {/* Información adicional según el período seleccionado */}
+                {isAnnual ? (
+                  <div className="mx-auto mb-4 text-center text-sm text-gray-700 dark:text-gray-300">
+                    <div className="text-green-600 font-semibold">
+                      ¡Ahorras ${Math.round(tier.originalPrice * 12 * 0.2)} al
+                      año!
+                    </div>
+                  </div>
+                ) : (
+                  <div className="mx-auto mb-4 text-center text-sm text-gray-700 dark:text-gray-300">
+                    <div className="text-gray-500">
+                      Paga anualmente y ahorra 20%
+                    </div>
+                  </div>
+                )}
+
+                {/* Características */}
                 <div className="flex flex-col gap-2">
                   {tier.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm">
