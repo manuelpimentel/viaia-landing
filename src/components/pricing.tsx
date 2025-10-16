@@ -47,35 +47,81 @@ type PricingTier = {
 export const PricingTiers: React.FC = () => {
   const tiers: PricingTier[] = [
     {
-      name: "FrontDesk",
-      originalPrice: 100.0,
+      name: "Alojamientos (hasta 20 habitaciones)",
+      originalPrice: 70.0,
       discountedPrice: 50.0,
-      description: "Tu agente de IA turístico disponible 24/7.",
+      description:
+        "Ideal para posadas o alojamientos pequeños que buscan más visibilidad y gestión inteligente.",
       features: [
-        "Atención automática 24/7 a potenciales clientes",
-        "Respuestas a dudas y orientación a la reserva",
-        "Invitación conversacional a generar reservas",
-        "Certificado VIAIA (insignia de servicio validado)",
-        "Validación de datos y métodos de gestión",
-        "Notificación de leads vía WhatsApp",
+        "1 mes de prueba gratis",
+        "20% de descuento por suscripción anual",
+        "Certificación de servicio Viaia",
+        "Soporte de IA 24/7 (FrontDesk)",
+        "Gestión completa de perfil y reservas (BackOffice)",
       ],
-      icon: "lucide:bot",
+      icon: "lucide:home",
     },
     {
-      name: "FrontDesk + BackOffice",
-      originalPrice: 179.99,
-      discountedPrice: 89.99,
-      description: "Todo lo del FrontDesk con gestión completa de tu servicio.",
+      name: "Alojamientos (más de 20 habitaciones)",
+      originalPrice: 100.0,
+      discountedPrice: 80.0,
+      description:
+        "Para hoteles o complejos turísticos con más demanda y necesidad de control avanzado.",
       features: [
-        "Incluye todo lo de FrontDesk",
-        "Dashboard de leads y reservas",
-        "Gestión de datos relevantes de tu servicio",
-        "Control de información, precios y fotos",
-        "Gestión de la disponibilidad y reservas",
-        "Soporte prioritario",
+        "1 mes de prueba gratis",
+        "20% de descuento por suscripción anual",
+        "Gestión de datos, disponibilidad y precios",
+        "Panel completo de reservas y clientes",
+        "Certificación de servicio Viaia",
       ],
       isPopular: true,
-      icon: "lucide:layout-dashboard",
+      icon: "lucide:building",
+    },
+    {
+      name: "Actividades turísticas",
+      originalPrice: 70.0,
+      discountedPrice: 50.0,
+      description:
+        "Perfecto para operadores, guías y experiencias locales que quieren conectar con más viajeros.",
+      features: [
+        "1 mes de prueba gratis",
+        "20% de descuento por suscripción anual",
+        "Certificación de servicio Viaia",
+        "Gestión de reservas y disponibilidad",
+        "Integración con atención automática por chat",
+      ],
+      icon: "lucide:compass",
+    },
+    {
+      name: "Restaurantes",
+      originalPrice: 50.0,
+      discountedPrice: 30.0,
+      description:
+        "Pensado para restaurantes, cafés y bares que buscan atraer viajeros y mostrar su oferta.",
+      features: [
+        "1 mes de prueba gratis",
+        "20% de descuento por suscripción anual",
+        "Certificación de servicio Viaia",
+        "Gestión de perfil y reseñas",
+        "Atención automatizada a consultas",
+      ],
+      icon: "lucide:utensils-crossed",
+      isPopular: true,
+    },
+    {
+      name: "Transporte",
+      originalPrice: 50.0,
+      discountedPrice: 30.0,
+      description:
+        "Ideal para servicios de traslado, tours sobre ruedas o transporte privado que deseen más reservas.",
+      features: [
+        "1 mes de prueba gratis",
+        "20% de descuento por suscripción anual",
+        "Certificación de servicio Viaia",
+        "Gestión de perfil, rutas y disponibilidad",
+        "Atención automatizada a solicitudes de traslado",
+      ],
+      icon: "lucide:bus",
     },
   ];
 
@@ -89,37 +135,35 @@ export const PricingTiers: React.FC = () => {
             colors={["#2E005D", "#5C0087", "#8A0087", "#FF6200", "#FF8000"]}
             showBorder={true}
           >
-            Haz crecer tu servicio con Viaia
+            Planes adaptados a tu servicio
           </GradientText>
         </h2>
 
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Lleva tu negocio turístico al siguiente nivel con planes diseñados
-          para potenciar tu alcance, certificar tu servicio y atraer más
-          clientes.{" "}
-          <span className="font-bold text-[#007A8A]">
-            Es tu momento de destacar.
-          </span>
+          Viaia impulsa tu visibilidad, optimiza tu gestión y conecta tu
+          servicio con más viajeros.{" "}
+          <span className="font-bold text-[#007A8A]">Empieza gratis hoy.</span>
         </p>
       </div>
-      <div className="flex justify-center mb-6">
-        <h3 className="text-4xl font-extrabold text-[#007A8A] text-center">
-          Descubre nuestros precios
-        </h3>
-      </div>
+
       <div className="flex justify-center mb-12">
         <div className="inline-flex items-center gap-3 bg-content2 px-4 py-2 rounded-full">
           <Icon className="text-[#007A8A]" icon="lucide:calendar" />
           <span className="text-sm font-medium">
-            Oferta por tiempo limitado - 50% de descuento los primeros 2 meses
+            1 mes de prueba gratis · 20% de descuento por suscripción anual
           </span>
         </div>
       </div>
-      <div className="grid px-4 md:px-10 grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+      <div className="grid px-4 md:px-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {tiers.map((tier, index) => (
           <Card
             key={index}
-            className={`border-2 relative ${tier.isPopular ? "border-[#007A8A] shining-border" : "border-default-200"} overflow-visible transition-all duration-300`}
+            className={`border-2 relative ${
+              tier.isPopular
+                ? "border-[#007A8A] shining-border"
+                : "border-default-200"
+            } overflow-visible transition-all duration-300`}
           >
             {tier.isPopular && (
               <div className="absolute -top-3 left-0 right-0 flex justify-center">
@@ -131,6 +175,7 @@ export const PricingTiers: React.FC = () => {
                 </Chip>
               </div>
             )}
+
             <CardHeader className="flex gap-3 pb-0 pt-6">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
@@ -142,6 +187,7 @@ export const PricingTiers: React.FC = () => {
                 </p>
               </div>
             </CardHeader>
+
             <CardBody className="py-6">
               <div className="flex items-baseline gap-1 mb-4">
                 <span className="text-3xl font-bold">
@@ -165,6 +211,7 @@ export const PricingTiers: React.FC = () => {
           </Card>
         ))}
       </div>
+
       <div className="flex justify-center mt-10 flex-col items-center">
         <Button
           className="bg-[#007A8A] text-white hover:bg-[#0088C2] shining-border"
@@ -175,7 +222,7 @@ export const PricingTiers: React.FC = () => {
           Contáctanos
         </Button>
         <p className="text-center text-foreground-500 max-w-xl mt-6">
-          Queremos conocerte. Contáctanos para más información.
+          Conversemos sobre tu servicio y personaliza tu plan con Viaia.
         </p>
       </div>
     </div>
