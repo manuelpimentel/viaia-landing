@@ -286,7 +286,7 @@ export const PricingTiers: React.FC = () => {
         <Button
           className="bg-[#007A8A] text-white hover:bg-[#0088C2] shining-border"
           size="lg"
-          onPress={() => (window.location.href = "https://wa.me/584248005957")}
+          onPress={() => (window.location.href = "https://wa.me/13075001620")}
         >
           Contáctanos
         </Button>
