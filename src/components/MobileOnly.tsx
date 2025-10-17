@@ -67,7 +67,7 @@ export default function MobileOnly({
             </h2>
             <p className="text-gray-600 text-base sm:text-xl md:text-2xl lg:text-3xl dark:text-gray-400 mb-4 lg:mb-8">
               Explora Venezuela con <strong>Viaia</strong>.<br /> Escanea el
-              código y comienza tu viaje.
+              código y atrévete a descubrir.
             </p>
             <div className="w-full flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-6">
               {/* Primer QR */}

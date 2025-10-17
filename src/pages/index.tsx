@@ -284,7 +284,7 @@ export default function IndexPage() {
 
             <div className="bg-[#fff] pb-10 px-6">
               <div className="text-2xl pt-6 md:text-4xl lg:text-5xl">
-                Tan fácil como preguntarle a quien realmente sabe a dónde ir.
+                Tan fácil como preguntarle a quien realmente sabe 🤖
               </div>
               <div className="flex justify-center mt-5">
                 <AnimatedContent>
