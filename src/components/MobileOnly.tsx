@@ -59,7 +59,7 @@ export default function MobileOnly({
           <Button
             as={Link}
             className="text-[#007A8A] border-[#007A8A] hover:text-white"
-            href="https://wa.me/584248005957"
+            href="https://wa.me/13075001620"
             rel="noopener noreferrer"
             target="_blank"
             variant="bordered"
@@ -314,7 +314,7 @@ export default function MobileOnly({
             <a
               aria-label="WhatsApp"
               className="text-3xl text-green-500 hover:scale-110 transition-transform"
-              href="https://wa.me/584248005957"
+              href="https://wa.me/13075001620"
             >
               <FaWhatsapp />
             </a>
