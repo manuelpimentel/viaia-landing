@@ -360,7 +360,7 @@ export default function IndexPage() {
               className="bg-[#007A8A] text-white hover:bg-[#0088C2] rounded-full shadow-lg px-8 py-2 transition-all mt-6"
               size="lg"
               onPress={() =>
-                (window.location.href = "https://wa.me/13075001620")
+                (window.location.href = "https://wa.me/584228846783")
               }
             >
               Contáctanos

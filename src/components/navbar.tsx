@@ -28,7 +28,7 @@ export default function NavBar() {
           <Button
             as={Link}
             className="text-[#007A8A] border-[#007A8A] hover:text-whit"
-            href="https://wa.me/13075001620"
+            href="https://wa.me/584228846783"
             rel="noopener noreferrer"
             target="_blank"
             variant="bordered"
