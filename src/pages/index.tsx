@@ -24,7 +24,7 @@ export default function IndexPage() {
       {/* NAV */}
       <nav className="landing-nav">
         <a href="#" className="nav-logo">
-          <img src="/Vector-4.png" alt="Viaia" style={{ height: "50px" }} />
+          <img src="/Vector-4.png" alt="Viaia" style={{ height: "40px" }} />
         </a>
         <div className="nav-actions">
           <a href="https://app.esviaia.com" className="mobile-hidden">Viaia App</a>
