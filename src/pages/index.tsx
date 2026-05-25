@@ -22,18 +22,16 @@ export default function IndexPage() {
   return (
     <div className="viaia-landing-v2">
       {/* NAV */}
-      <nav>
-        <div className="nav-inner">
-          <a href="#" className="nav-logo">
-            <img src="/Vector-4.png" alt="Viaia" style={{ height: "24px" }} />
+      <nav className="landing-nav">
+        <a href="#" className="nav-logo">
+          <img src="/Vector-4.png" alt="Viaia" style={{ height: "50px" }} />
+        </a>
+        <div className="nav-actions">
+          <a href="https://app.esviaia.com" className="mobile-hidden">Viaia App</a>
+          <a href="https://flow.esviaia.com" className="mobile-hidden">Viaia Flow</a>
+          <a href="https://wa.me/584228846783" className="btn-ghost">
+            Contacto
           </a>
-          <div className="nav-links">
-            <a href="https://app.esviaia.com">Viaia App</a>
-            <a href="https://flow.esviaia.com">Viaia Flow</a>
-            <a href="https://wa.me/584228846783" className="pill-dark">
-              Contacto
-            </a>
-          </div>
         </div>
       </nav>
 
