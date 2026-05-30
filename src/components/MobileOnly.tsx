@@ -176,6 +176,214 @@ export default function MobileOnly({
         </div>
       </section>
 
+      {/* ── WHATSAPP ADD-ON HIGHLIGHT ── */}
+      <section className="bg-[#fcfcfc] py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="wa-highlight">
+            <style>{`
+              .wa-highlight {
+                border-radius: 24px;
+                background: #ffffff;
+                position: relative;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+              }
+              .wa-highlight-bg {
+                position: absolute; inset: 0;
+                background:
+                  radial-gradient(ellipse 55% 80% at 0% 100%, rgba(37,211,102,0.06) 0%, transparent 60%),
+                  radial-gradient(ellipse 40% 60% at 100% 0%, rgba(0,122,138,0.05) 0%, transparent 55%);
+                pointer-events: none;
+              }
+              .wa-highlight-dots {
+                position: absolute; inset: 0;
+                background-image: radial-gradient(circle, rgba(0,0,0,.015) 1px, transparent 1px);
+                background-size: 22px 22px;
+                pointer-events: none;
+              }
+              .wa-highlight-left {
+                position: relative; z-index: 1;
+                padding: 52px 48px 52px 52px;
+                display: flex; flex-direction: column; gap: 24px;
+                border-right: 1px solid rgba(0,0,0,.06);
+              }
+              .wa-badge {
+                display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+                background: rgba(37,211,102,.12);
+                border: 1px solid rgba(37,211,102,.25);
+                border-radius: 99px; padding: 5px 14px;
+                font-size: 12px; color: rgba(37,211,102,.9); font-weight: 600;
+                letter-spacing: .04em; text-transform: uppercase;
+                font-family: 'Open Sans', sans-serif;
+              }
+              .wa-badge-dot {
+                width: 6px; height: 6px; border-radius: 50%;
+                background: #25D366; flex-shrink: 0;
+                box-shadow: 0 0 6px rgba(37,211,102,.6);
+                animation: waPulse 2s ease-in-out infinite;
+              }
+              @keyframes waPulse {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: .6; transform: scale(1.3); }
+              }
+              .wa-highlight-left h3 {
+                font-family: 'Poppins', sans-serif;
+                font-size: clamp(26px, 3vw, 38px);
+                font-weight: 600; line-height: 1.1;
+                color: #1a1a1a; letter-spacing: -1px;
+                margin: 0;
+              }
+              .wa-highlight-left h3 em {
+                font-style: normal; color: #25D366;
+              }
+              .wa-highlight-left p {
+                font-size: 15px; color: rgba(0,0,0,.6);
+                line-height: 1.75; font-weight: 300; margin: 0;
+                max-width: 380px;
+              }
+              .wa-highlight-left p strong {
+                color: rgba(0,0,0,.8); font-weight: 500;
+              }
+              .wa-cta-link {
+                display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+                background: #25D366; border: none; border-radius: 99px;
+                padding: 11px 24px; font-family: 'Open Sans', sans-serif;
+                font-size: 14px; font-weight: 500; color: #fff;
+                cursor: pointer; text-decoration: none;
+                transition: opacity .2s, transform .15s;
+                box-shadow: 0 4px 16px rgba(37,211,102,.35);
+              }
+              .wa-cta-link:hover { opacity: .9; transform: translateY(-1px); }
+              .wa-cta-link svg { flex-shrink: 0; }
+
+              .wa-highlight-right {
+                position: relative; z-index: 1;
+                padding: 52px 52px 52px 48px;
+                display: flex; flex-direction: column; gap: 14px; justify-content: center;
+              }
+              .wa-feat {
+                display: flex; align-items: flex-start; gap: 16px;
+                background: rgba(0,0,0,.02);
+                border: 1px solid rgba(0,0,0,.07);
+                border-radius: 14px; padding: 18px 20px;
+                transition: background .2s;
+              }
+              .wa-feat:hover { background: rgba(0,0,0,.04); }
+              .wa-feat-icon {
+                width: 36px; height: 36px; border-radius: 10px;
+                background: rgba(37,211,102,.12);
+                border: 1px solid rgba(37,211,102,.2);
+                display: flex; align-items: center; justify-content: center;
+                font-size: 17px; flex-shrink: 0;
+              }
+              .wa-feat-body { display: flex; flex-direction: column; gap: 4px; }
+              .wa-feat-title { font-size: 14px; color: rgba(0,0,0,.75); font-weight: 500; }
+              .wa-feat-desc { font-size: 12.5px; color: rgba(0,0,0,.5); line-height: 1.5; }
+
+              @media (max-width: 900px) {
+                .wa-highlight {
+                  grid-template-columns: 1fr;
+                }
+                .wa-highlight-left {
+                  padding: 36px 24px 28px;
+                  border-right: none;
+                  border-bottom: 1px solid rgba(0,0,0,.06);
+                }
+                .wa-highlight-right {
+                  padding: 28px 24px 36px;
+                }
+                .wa-highlight-left h3 { font-size: clamp(24px, 7vw, 30px); }
+                .wa-highlight-left p { font-size: 14px; }
+              }
+            `}</style>
+
+            <div className="wa-highlight-bg" />
+            <div className="wa-highlight-dots" />
+
+            {/* Lado izquierdo — mensaje */}
+            <div className="wa-highlight-left">
+              <div className="wa-badge">
+                <span className="wa-badge-dot" />
+                <span>Add-on WhatsApp</span>
+              </div>
+              <h3>
+                Tu perfil Viaia
+                <br />
+                ahora también
+                <br />
+                opera tu <em>WhatsApp</em>
+              </h3>
+              <p>
+                Todo lo que configuraste en Flow — precios, reglas, productos,
+                comodidades —<strong> Viaia lo usa para atender</strong> a quien
+                te escribe directamente al número que asignes.
+                <br />
+                <strong>Viaia</strong> trabaja por ti desde tu perfil y opera tu
+                whatsapp, no pierdas ni una sola oportunidad
+              </p>
+              <a
+                className="wa-cta-link"
+                href="https://api.whatsapp.com/send/?phone=584228846783"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  fill="currentColor"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  width="16"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.528 5.852L0 24l6.272-1.508A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.992-1.364l-.358-.213-3.724.895.944-3.628-.234-.373A9.818 9.818 0 1112 21.818z" />
+                </svg>
+                Experimenta la atención por WhatsApp
+              </a>
+            </div>
+
+            {/* Lado derecho — features */}
+            <div className="wa-highlight-right">
+              <div className="wa-feat">
+                <div className="wa-feat-icon">📲</div>
+                <div className="wa-feat-body">
+                  <div className="wa-feat-title">Tu número, tu asistente</div>
+                  <div className="wa-feat-desc">
+                    El cliente escribe al número que asignes. Viaia toma el
+                    control y atiende la conversación completa.
+                  </div>
+                </div>
+              </div>
+              <div className="wa-feat">
+                <div className="wa-feat-icon">⚡</div>
+                <div className="wa-feat-body">
+                  <div className="wa-feat-title">
+                    Misma información, más alcance
+                  </div>
+                  <div className="wa-feat-desc">
+                    Una sola configuración en Flow. Viaia la usa tanto en tu
+                    perfil como en WhatsApp.
+                  </div>
+                </div>
+              </div>
+              <div className="wa-feat">
+                <div className="wa-feat-icon">🌍</div>
+                <div className="wa-feat-body">
+                  <div className="wa-feat-title">
+                    En cualquier idioma, a cualquier hora
+                  </div>
+                  <div className="wa-feat-desc">
+                    Viaia se adapta al idioma del cliente. Sin horarios. Sin
+                    días libres.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* =======================
    Primer paso: Activa tu asistente operativo
 ======================= */}
