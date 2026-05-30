@@ -114,11 +114,10 @@ export const PricingTiers: React.FC = () => {
           {tiers.map((tier, index) => (
             <Card
               key={index}
-              className={`border-2 relative rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 overflow-visible ${
-                tier.isPopular
+              className={`border-2 relative rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 overflow-visible ${tier.isPopular
                   ? "border-[#007A8A] shining-border bg-gradient-to-b from-white to-[#f0faff]"
                   : "border-gray-200 bg-white"
-              }`}
+                }`}
             >
               {/* Etiqueta de plan más popular */}
               {tier.isPopular && (
@@ -192,7 +191,7 @@ export const PricingTiers: React.FC = () => {
         <Button
           className="bg-[#007A8A] text-white hover:bg-[#0088C2] shining-border"
           size="lg"
-          onPress={() => (window.location.href = "https://wa.me/13075001620")}
+          onPress={() => (window.location.href = "https://wa.me/584228846783")}
         >
           Contáctanos
         </Button>
